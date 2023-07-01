@@ -1,0 +1,329 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    line-height: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.background {
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 40px;
+    padding-left: 55px;
+}
+
+.home {
+    background-image: url(../assets/img/bg/home-bg.jpg);
+}
+
+.page {
+    background-image: url(../assets/img/bg/page-bg.jpg);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 64px;
+    margin-bottom: 250px;
+}
+
+.planets {
+    margin-bottom: 207px;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    order: 1;
+    margin-right: -96px;
+}
+
+.nav {
+    display: flex;
+    align-items: flex-end;
+    order: 2;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81px);
+    height: 96px;
+    min-width: 830px;
+    padding-left: 100px;
+}
+
+.nav ul {
+    display: flex;
+    column-gap: 63px;
+}
+
+.nav li {
+    position: relative;
+    padding-bottom: 36px;
+}
+
+.nav li a {
+    color: #D0D6F9;
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2.70px;
+    text-transform: uppercase;
+}
+
+.nav li a:hover {
+    color: #fff;
+}
+
+.nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
+    box-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+    transform-origin: left;
+}
+
+.nav li a:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.main {
+    padding-right: 55px;
+    padding-bottom: 130px;
+}
+
+.content-home,
+.content-planet {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    row-gap: 156px;
+    column-gap: 386px;
+}
+
+.content-planet {
+    column-gap: 106px;
+    row-gap: 119px;
+}
+
+.content-space {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.content-space h1 {
+    color: #D0D6F9;
+    font-size: 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 4.72px;
+}
+
+.content-space span {
+    color: white;
+    font-size: 150px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+}
+
+.content-space p {
+    color: #D0D6F9;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.content-explore>div {
+    width: 274px;
+    height: 274px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.content-explore div span {
+    color: #0B0D17;
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+div>.explore__scale {
+    width: 274px;
+    height: 274px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+}
+
+.explore__scale {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.10);
+    transform: scale(1, 1);
+}
+
+.explore__scale:hover {
+    transform: scale(1.6, 1.6);
+}
+
+.content-info {
+    max-width: 445px;
+}
+
+.content-img img {
+    box-shadow: 0 0 32px rgba(255, 255, 255, 0.2), 0 0 64px rgba(255, 255, 255, 0.3);
+    border-radius: 50%; 
+    animation: rotate infinite linear 40s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content-info h1 {
+    color: white;
+    font-size: 100px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.content-info>p {
+    color: #D0D6F9;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid #383B4B;
+    margin-bottom: 28px;
+}
+
+.content-info section {
+    display: flex;
+    column-gap: 80px;
+}
+
+.content-info section h2 {
+    color: #D0D6F9;
+    font-size: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+    margin-bottom: 12px;
+}
+
+.content-info section p {
+    color: white;
+    font-size: 28px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+    .content-info {
+        max-width: 573px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768.98px) {
+    .home {
+        background: url(../assets/img/bg/tablet-home-bg.jpg);
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .page {
+        background: url(../assets/img/bg/tablet-page-bg.jpg);
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .header {
+        column-gap: 104px;
+        margin-bottom: 66px;
+    }
+
+    .planets {
+        margin-bottom: 84px;
+    }
+
+    .main {
+        padding-bottom: 90px;
+    }
+
+    .content-space {
+        align-items: center;
+        max-width: 460px;
+    }
+
+    .content-space h1 {
+        font-size: 20px;
+    }
+
+    .content-space p,
+    .content-info p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .content-explore>div {
+        width: 242px;
+        height: 242px;
+    }
+
+    div>.explore__scale {
+        width: 242px;
+        height: 242px;
+    }
+
+    .content-img img {
+        width: 300px;
+        height: 300px;
+    }  
+} 
+
