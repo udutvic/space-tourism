@@ -22,7 +22,6 @@ li {
     background-repeat: no-repeat;
     background-position: center center;
     padding-top: 40px;
-    padding-left: 55px;
 }
 
 .home {
@@ -39,6 +38,7 @@ li {
     justify-content: space-between;
     column-gap: 64px;
     margin-bottom: 250px;
+    padding-left: 55px;
 }
 
 .planets {
@@ -110,6 +110,7 @@ li {
 
 .main {
     padding-right: 55px;
+    padding-left: 55px;
     padding-bottom: 130px;
 }
 
