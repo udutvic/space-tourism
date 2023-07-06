@@ -1,0 +1,253 @@
+@media (max-width: 980px) {
+    .home {
+        background: url(../assets/img/bg/tablet-home-bg.jpg);
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .page {
+        background: url(../assets/img/bg/tablet-page-bg.jpg);
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .header {
+        column-gap: 104px;
+        margin-bottom: 66px;
+    }
+
+    .planets {
+        margin-bottom: 84px;
+    }
+
+    .main {
+        padding-bottom: 90px;
+    }
+
+    .content-space {
+        align-items: center;
+        max-width: 460px;
+    }
+
+    .content-space h1 {
+        font-size: 20px;
+    }
+
+    .content-space p,
+    .content-info p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .content-explore a>div {
+        width: 242px;
+        height: 242px;
+    }
+
+    div>.explore__scale {
+        width: 242px;
+        height: 242px;
+    }
+
+    .content-img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .content-info {
+        max-width: 573px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header::after {
+        display: none;
+    }
+}
+
+@media (max-width: 704px) {
+    .background {
+        padding-top: 24px;    
+    }
+
+    .header {
+        flex-direction: column;
+        position: relative;
+        align-items: stretch;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header>a {
+        margin-left: 24px;
+        width: 40px;
+    }
+
+    .header>a>img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: max-content;
+        position: absolute;
+        top: 10px;
+        right: 26px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .burger-menu::before,
+    .burger-menu::after,
+    .burger-menu input {
+        content: "";
+        width: 24px;
+        height: 3px;
+        background-color: #D0D6F9;
+        transform-origin: right center;
+        transition: opacity 200ms ease-in-out, width 200ms ease-in-out,
+            rotate 200ms ease-in-out, translate 200ms ease-in-out,
+            background-color 200ms ease-in-out;
+    }
+
+    .burger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .burger-menu:has(input:checked)::before {
+        rotate: -45deg;
+        width: 25px;
+    }
+
+    .burger-menu:has(input:checked)::after {
+        rotate: 45deg;
+        width: 25px;
+    }
+
+    .burger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .nav {
+        position: relative;
+        transition: translate 200ms ease-in-out;
+        translate: -100%;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(81px);      
+        height: 100vh;
+        flex-direction: column;
+        padding-left: 61px;
+        align-items: flex-start;
+        padding-top: 100px;
+        z-index: 10;
+    }
+
+    .burger-menu:has(input:checked)+.nav {
+        translate: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .nav li {
+        padding-bottom: 10px;
+    }
+
+    .main {
+        position: absolute;
+        top: 112px;
+        padding: 0;
+    }
+
+    .moon,
+    .mars,
+    .europa,
+    .titan {
+        top: 139px;
+    }
+
+    .content-home,
+    .content-planet {
+        row-gap: 76px;
+    }
+
+    .content-space {
+        max-width: 327px;
+        row-gap: 16px;
+    }
+
+    .content-space h1 {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+
+    .content-space span {
+        font-size: 80px;
+    }
+
+    .content-space p,
+    .content-info>p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .content-explore a>div {
+        width: 150px;
+        height: 150px;
+    }
+
+    div>.explore__scale {
+        width: 150px;
+        height: 150px;
+    }
+
+    .content-explore a>div span {
+        font-size: 20px;
+    }
+
+    .content-img img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .content-info {
+        width: 327px;
+    }
+
+    .content-info h1 {
+        font-size: 56px;
+    }
+
+    .content-info>p {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
+
+    .content-info section {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .content-info section h2,
+    .content-info section p {
+        text-align: center;
+    }
+
+}
