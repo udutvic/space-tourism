@@ -20,6 +20,10 @@
         margin-bottom: 66px;
     }
 
+    .header::after {
+        margin-right: -130px;
+}
+
     .planets {
         margin-bottom: 84px;
     }
