@@ -190,6 +190,7 @@
     .content-home,
     .content-planet {
         row-gap: 76px;
+        align-items: center;
     }
 
     .content-space {
